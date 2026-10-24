@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3a8a, #6d28d9);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: #1f2937;
+}
+
+.game {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: #1e3a8a;
+}
+
+.subtitle {
+  margin: 0.4rem 0 1.5rem;
+  color: #6b7280;
+}
+
+.scoreboard {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.score-box {
+  flex: 1;
+  background: #f3f4f6;
+  border-radius: 10px;
+  padding: 0.75rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.score-box .label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+}
+
+.score-box .value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.choices {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.choice-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #eef2ff;
+  border: 2px solid #c7d2fe;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.15s, border-color 0.15s;
+}
+
+.choice-btn .emoji {
+  font-size: 2.2rem;
+}
+
+.choice-btn:hover,
+.choice-btn:focus-visible {
+  background: #e0e7ff;
+  border-color: #6d28d9;
+  transform: translateY(-3px);
+  outline: none;
+}
+
+.choice-btn:active {
+  transform: translateY(0);
+}
+
+.result {
+  min-height: 110px;
+  margin-bottom: 1rem;
+}
+
+.picks p {
+  margin: 0.2rem 0;
+  text-transform: capitalize;
+}
+
+.message {
+  margin-top: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.message.win { color: #16a34a; }
+.message.lose { color: #dc2626; }
+.message.draw { color: #d97706; }
+
+.reset-btn {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #ea580c;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.reset-btn:hover,
+.reset-btn:focus-visible {
+  background: #c2410c;
+  outline: none;
+}
+
+@media (max-width: 420px) {
+  .game { padding: 1.5rem 1rem; }
+  .choice-btn .emoji { font-size: 1.8rem; }
+  .choice-btn { font-size: 0.9rem; }
+}
